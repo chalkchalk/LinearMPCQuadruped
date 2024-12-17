@@ -1,0 +1,5 @@
+<launch>
+    <arg name="joy_type" default="real"/>
+    <rosparam file="$(find quadruped_joy)/config/quadruped_joy_$(arg joy_type).yaml" command="load"/>
+    <node pkg="quadruped_joy" type="quadruped_joy_node" name="quadruped_joy_node" output="screen"/>
+</launch>

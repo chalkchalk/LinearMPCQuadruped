@@ -1,0 +1,7 @@
+<launch>
+    <rosparam file="$(find quadruped_control)/config/realdog.yaml" command="load"/>
+    <include file="$(find quadruped_joy)/launch/quadruped_joy.launch">
+        <arg name="joy_type" value="real"/>
+    </include>
+    <node pkg="quadruped_control" type="realdog_node" name="realdog_node" output="screen"/>
+</launch>

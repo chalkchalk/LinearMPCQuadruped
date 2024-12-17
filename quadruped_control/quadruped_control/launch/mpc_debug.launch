@@ -1,0 +1,4 @@
+<launch>
+    <rosparam file="$(find quadruped_control)/config/gazebodog.yaml" command="load"/>
+    <node pkg="quadruped_control" type="mpc_debug" name="mpc_debug" output="screen"/>
+</launch>
